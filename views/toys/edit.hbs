@@ -1,0 +1,34 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <form class="card bg-light ml-3 mr-3" action="/toys/edit/{{ movie._id }}" method="post">
+      <h1 class="text text-primary mt-2 mb-2">Edit toys</h1>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Toy Name</label>
+         <input class="form-control" type="text" name="name" value={{ movie.name }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Qrigin</label>
+         <input class="form-control" type="text" name="origin" value={{ movie.origin }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Quality</label>
+         <input class="form-control" type="number" name="quality" value={{ movie.quality }} required min="1" max="999">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Price</label>
+         <input class="form-control" type="number" name="price" value={{ movie.price }} required min="1" max="9999999">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Img</label><br>
+         <img src="{{ movie.poster }}" width="150" height="200">
+         <input class="form-control" type="text" name="img" value={{ movie.img }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Video</label><br>
+         <iframe src="https://www.youtube.com/embed/{{movie.trailer}}" width="250" height="200"></iframe>
+         <input class="form-control" type="text" name="video" value={{ movie.video }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <input class="btn btn-danger" type="submit" value="Edit">
+      </div>
+</form>
+</div>

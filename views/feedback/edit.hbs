@@ -1,0 +1,25 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+    <form class="card bg-light ml-3 mr-3" action="/feedback/edit/{{feedback._id}}" method="post">
+        <h1 class="text text-primary mt-2 mb-2">Edit</h1>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">NameCustomer</label>
+            <input class="form-control" type="text" name="NameCustomer" value={{ feedback.NameCustomer }} required>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Phonenumber</label>
+            <input class="form-control" type="text" name="Phonenumber" value={{ feedback.Phonenumber}} required>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Address</label>
+            <input class="form-control" type="text" name="Address" value={{ feedback.Address}} required>
+        </div>
+        <div class="form-group mt-2 mb-2">
+            <label class="fw-bold" for="">Feedback</label>
+            <input class="form-control" type="text" name="Feedback" value={{ feedback.Feedblack }} required>
+        </div>
+
+        <div class="form-group mt-2 mb-2">
+            <input class="btn btn-danger" type="submit" value="Edit">
+        </div>
+    </form>
+</div>

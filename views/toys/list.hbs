@@ -1,0 +1,31 @@
+<div class="container text-center">
+   <h1 class="text text-warning mb-2">Online Toys Store</h1>
+   <div class="row mt-3 mb-3">
+      <div class="col">
+         <a class="btn btn-primary" href="/toys/sort/asc">Sort ascending</a>
+         <a class="btn btn-warning" href="/toys/sort/desc">Sort descending</a>
+      </div>
+      <div class="col md-4">
+         <form action="/toys/search" method="post">
+            <input class="form-control" type="search" name="name" placeholder="Search by title" required>
+         </form>
+      </div>
+   </div>
+   <div class="card-group">
+      <div class="row">
+         {{#each toys }}
+         <div class="card col-md-3 mb-3">
+            <img class="card-img-top mt-3" src="{{ img }}" width="180" height="150">
+            <div class="card-body">
+               <h4 class="card-title text-success">{{ name }}</h4>
+               <p class="fw-bold card-text text-primary">{{ price }}</p>
+               <form action="/toys/rent" method="post">
+                 <input type="hidden" name="id" value="{{_id}}">
+                 <input type="submit" class="btn btn-danger" value="Rent"/>
+               </form>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</div>
