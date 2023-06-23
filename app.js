@@ -13,6 +13,8 @@ app.use('/toys', movieRouter);
 var feedbackRouter = require('./routes/feedback');
 app.use('/feedback',feedbackRouter);
 
+var carRouter = require('./routes/car');
+app.use('/cars',carRouter);
 
 //mongoose
 var mongoose = require('mongoose');

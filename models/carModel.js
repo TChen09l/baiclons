@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Toyschema = mongoose.Schema(
+var Craschema = mongoose.Schema(
    {
       name : String,
       origin : String,
@@ -11,6 +11,6 @@ var Toyschema = mongoose.Schema(
    }
 );
 
-var carsModel = mongoose.model("xe", Toyschema, "cars");
+var carModel = mongoose.model("xe", Craschema, "cars");
 
-module.exports = carsModel;
+module.exports = carModel;
